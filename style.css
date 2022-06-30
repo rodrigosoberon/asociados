@@ -14,13 +14,17 @@
   font-family: "Raleway", sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-@media (max-width: 576px) {
+@media (max-width: 607px) {
   header {
     flex-direction: column;
   }
@@ -53,7 +57,7 @@ header {
   }
 }
 
-@media (min-width: 577px){
+@media (min-width: 608px){
     header {
         flex-direction: row;
       }
