@@ -26,34 +26,16 @@
       <nav>
         <a class="nav-item" href="#nosotros">Nosotros</a>
         <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contáctenos</a>
+        <a href="#mapa">Ubicación</a>
       </nav>
     </header>
 
     <main>
       <div id="banner">
-        <img id="banner-image" src="./images/legal2.webp" alt="" />
-      </div>
-
-      <section id="nosotros">
-        <h2>Quienes somos</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, nulla
-          temporibus dignissimos iste deleniti aspernatur soluta quasi excepturi
-          necessitatibus a libero ipsum blanditiis ducimus inventore mollitia
-          minus reprehenderit hic nemo.
-        </p>
-        <p>Imagen</p>
-      </section>
-
-      <hr />
-
-      <section id="servicios">
-        <h2>Servicios</h2>
-        <!-- <div class="servicios-accordion">
-
-          <button class="servicios-detalle"><h3>Derecho penal</h3></button>
-            <div class="servicios-detalle-item">
+        <div class="banner-item">
+          <div id="servicios">
+            <button class="accordion">Derecho penal</button>
+            <div class="panel">
               <ul>
                 <li>Escarcelaciones</li>
                 <li>Querellas</li>
@@ -64,10 +46,9 @@
                 <li>Violencia de género</li>
               </ul>
             </div>
-          
-
-          <button class="servicios-detalle"><h3>Derecho civil</h3></button>
-            <div class="servicios-detalle-item">
+    
+            <button class="accordion">Derecho civil</button>
+            <div class="panel">
               <ul>
                 <li>Divorcios</li>
                 <li>Adopciones</li>
@@ -84,85 +65,61 @@
                 <li>Constitución de sociedades</li>
               </ul>
             </div>
-          
-
-          <button class="servicios-detalle"><h3>Derecho laboral</h3>          </button>
-            <div class="servicios-detalle-item">
+    
+            <button class="accordion">Derecho laboral</button>
+            <div class="panel">
               <ul>
                 <li>Parte demandada</li>
                 <li>Parte actora</li>
                 <li>Mediciones laborales (SECLO)</li>
               </ul>
             </div>
-
-
-        </div> -->
-        <button class="accordion">Derecho penal</button>
-        <div class="panel">
-          <ul>
-            <li>Escarcelaciones</li>
-            <li>Querellas</li>
-            <li>Defensas</li>
-            <li>Recursos</li>
-            <li>Suspensión de juicio a prueba</li>
-            <li>Seguimiento de causas</li>
-            <li>Violencia de género</li>
-          </ul>
+          </div>
         </div>
 
-        <button class="accordion">Derecho civil</button>
-        <div class="panel">
-          <ul>
-            <li>Divorcios</li>
-            <li>Adopciones</li>
-            <li>Accidentes de tránsito</li>
-            <li>Consorcios</li>
-            <li>Determinación de la capacidad</li>
-            <li>Derechos realies</li>
-            <li>Contratos de alquileres</li>
-            <li>Contrato de servicios</li>
-            <li>Contratos societarios</li>
-            <li>Liquidación de expensas</li>
-            <li>Cambio de identidad de género</li>
-            <li>Desalojo</li>
-            <li>Constitución de sociedades</li>
-          </ul>
-        </div>
+        <form class="banner-item" id="form-contacto" action="/">
+          <label for="nombre">Nombre:</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            placeholder="Su nombre aquí..."
+          />
 
-        <button class="accordion">Derecho laboral</button>
-        <div class="panel">
-          <ul>
-            <li>Parte demandada</li>
-            <li>Parte actora</li>
-            <li>Mediciones laborales (SECLO)</li>
-          </ul>
-        </div>
+          <label for="email">Correo electrónico:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="correo@email.com"
+          />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            placeholder="Escriba su consulta aquí..."
+            style="height: 200px"
+          ></textarea>
+
+          <input type="submit" value="Enviar" />
+        </form>
+      </div>
+
+      <section id="nosotros">
+        <h2>Quienes somos</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, nulla
+          temporibus dignissimos iste deleniti aspernatur soluta quasi excepturi
+          necessitatibus a libero ipsum blanditiis ducimus inventore mollitia
+          minus reprehenderit hic nemo.
+        </p>
+        <p>Imagen</p>
       </section>
 
       <hr />
 
-      <section id="contacto">
-        <h2>Contáctenos</h2>
-        <div class="container">
-          <form action="/">
-        
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Su nombre aquí...">
-        
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="correo@email.com">
-    
-        
-            <label for="mensaje">Mensaje:</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Escriba su consulta aquí..." style="height:200px"></textarea>
-        
-            <input type="submit" value="Enviar">
-        
-          </form>
-        </div>
-      </section>
 
-      <hr />
 
       <section id="mapa">
         <p>mapa</p>
