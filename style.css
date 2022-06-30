@@ -4,6 +4,7 @@
   --color3: #c2b78a;
   --color4: #1d1e21;
   --color5: #ebeff2;
+  --translucido: #ccccccb3;
 }
 
 * {
@@ -125,7 +126,7 @@ nav a:hover {
 .banner-item{
   /* color: var(--color1); */
   padding: 1em;
-  margin: 1em;
+  margin: 4em;
   border-radius: 1em;
 }
 /** Fin BANNER */
@@ -147,7 +148,7 @@ nav a:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.6s ease-out;
-  background-color: aliceblue;
+  background-color: var(--translucido)
 }
 
 .accordion::after {
@@ -165,7 +166,7 @@ nav a:hover {
 /** CONTACTO */
 
 #form-contacto {
-  background-color: rgba(204, 204, 204, 0.7);
+  background-color: var(--translucido);
 }
 
 #form-contacto label {
