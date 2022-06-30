@@ -1,9 +1,9 @@
-:root{
-    --color1: #657BA6;
-    --color2: #735D36;
-    --color3: #C2B78A;
-    --color4: #1D1E21;
-    --color5: #EBEFF2;
+:root {
+  --color1: #657ba6;
+  --color2: #735d36;
+  --color3: #c2b78a;
+  --color4: #1d1e21;
+  --color5: #ebeff2;
 }
 
 * {
@@ -15,14 +15,19 @@
 }
 
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+}
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 @media (max-width: 607px) {
   header {
@@ -38,7 +43,6 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
   }
 
   .title-logo {
@@ -47,7 +51,7 @@ header {
     margin-bottom: 1em;
   }
 
-  nav{
+  nav {
     margin: 1em 0;
   }
 
@@ -57,47 +61,44 @@ header {
   }
 }
 
-@media (min-width: 608px){
-    header {
-        flex-direction: row;
-      }
-      .title-names {
-        display: flex;
-        flex-direction: column;
-      }
-    
-      .title {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        margin: 1em 1em;
-      }
-    
-      .title-logo {
-        color: aliceblue;
-        height: 2em;
-        margin: 1em;
-        margin-bottom: 1em;
-      }
-    
-      nav{
-        margin: 1em 0;
-      }
-    
-      nav a {
-        text-decoration: none;
-        margin: 1em;
-      }
+@media (min-width: 608px) {
+  header {
+    flex-direction: row;
+  }
+  .title-names {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 1em;
+  }
+
+  .title-logo {
+    color: aliceblue;
+    height: 2em;
+    margin: 1em;
+    margin-bottom: 1em;
+  }
+
+  nav {
+    margin: 1em 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    margin: 1em;
+  }
 }
 
-  #banner-image {
-    width: 100%;
-  }
+#banner-image {
+  width: 100%;
+}
 
-  section {
-    padding: 2em;
-  }
-
-
-
+section {
+  padding: 2em;
+}
