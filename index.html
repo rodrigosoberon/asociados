@@ -16,7 +16,7 @@
   <body>
     <header>
       <div class="title">
-        <img src="./images/building-columns-solid.svg" class="title-logo"></img>
+        <img src="./images/building-columns-solid.svg" class="title-logo" />
         <div class="title-names">
           <h1>Fangi Sosa</h1>
           <p>y asociados</p>
@@ -50,11 +50,10 @@
 
       <section id="servicios">
         <h2>Servicios</h2>
-        <div class="servicios-fila">
-          
-          <div class="servicios-columna">
-            <div class="servicios-columna-item">
-              <h3>Derecho penal</h3>
+        <!-- <div class="servicios-accordion">
+
+          <button class="servicios-detalle"><h3>Derecho penal</h3></button>
+            <div class="servicios-detalle-item">
               <ul>
                 <li>Escarcelaciones</li>
                 <li>Querellas</li>
@@ -65,11 +64,10 @@
                 <li>Violencia de género</li>
               </ul>
             </div>
-          </div>
+          
 
-          <div class="servicios-columna">
-            <div class="servicios-columna-item">
-              <h3>Derecho civil</h3>
+          <button class="servicios-detalle"><h3>Derecho civil</h3></button>
+            <div class="servicios-detalle-item">
               <ul>
                 <li>Divorcios</li>
                 <li>Adopciones</li>
@@ -86,19 +84,58 @@
                 <li>Constitución de sociedades</li>
               </ul>
             </div>
-          </div>
+          
 
-          <div class="servicios-columna">
-            <div class="servicios-columna-item">
-              <h3>Derecho laboral</h3>
+          <button class="servicios-detalle"><h3>Derecho laboral</h3>          </button>
+            <div class="servicios-detalle-item">
               <ul>
                 <li>Parte demandada</li>
                 <li>Parte actora</li>
                 <li>Mediciones laborales (SECLO)</li>
               </ul>
             </div>
-          </div>
 
+
+        </div> -->
+        <button class="accordion">Derecho penal</button>
+        <div class="panel">
+          <ul>
+            <li>Escarcelaciones</li>
+            <li>Querellas</li>
+            <li>Defensas</li>
+            <li>Recursos</li>
+            <li>Suspensión de juicio a prueba</li>
+            <li>Seguimiento de causas</li>
+            <li>Violencia de género</li>
+          </ul>
+        </div>
+
+        <button class="accordion">Derecho civil</button>
+        <div class="panel">
+          <ul>
+            <li>Divorcios</li>
+            <li>Adopciones</li>
+            <li>Accidentes de tránsito</li>
+            <li>Consorcios</li>
+            <li>Determinación de la capacidad</li>
+            <li>Derechos realies</li>
+            <li>Contratos de alquileres</li>
+            <li>Contrato de servicios</li>
+            <li>Contratos societarios</li>
+            <li>Liquidación de expensas</li>
+            <li>Cambio de identidad de género</li>
+            <li>Desalojo</li>
+            <li>Constitución de sociedades</li>
+          </ul>
+        </div>
+
+        <button class="accordion">Derecho laboral</button>
+        <div class="panel">
+          <ul>
+            <li>Parte demandada</li>
+            <li>Parte actora</li>
+            <li>Mediciones laborales (SECLO)</li>
+          </ul>
         </div>
       </section>
 
@@ -122,4 +159,5 @@
       </footer>
     </main>
   </body>
+  <script src="./script.js"></script>
 </html>

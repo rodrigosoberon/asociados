@@ -102,3 +102,31 @@ header {
 section {
   padding: 2em;
 }
+
+/* * Servicios */
+.accordion {
+    cursor: pointer;
+    padding: 1em;
+    width: 12em;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  .panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease-out;
+  }
+
+  .accordion::after {
+    content: '\02795';
+    font-size: 1em;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active::after {
+    content: "\2796";
+  }
