@@ -29,35 +29,53 @@ header {
   align-items: center;
 }
 
+
+/** TITULO */
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-names {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-logo {
+  height: 3em;
+  margin-right: 1em;
+}
+/** Fin TITULO  */
+
+
+/** NAVBAR */
+nav {
+  margin: 1em 0;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 1em;
+  transition: color 0.4s;
+}
+
+nav a:hover{
+  color: var(--color3);
+  /* background-color: var(--color3); */
+}
+/** Fin NABVAR */
+
+
 @media (max-width: 607px) {
   header {
     flex-direction: column;
   }
-  .title-names {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 
   .title-logo {
-    height: 2em;
-    margin: 1em;
-    margin-bottom: 1em;
-  }
-
-  nav {
-    margin: 1em 0;
-  }
-
-  nav a {
-    text-decoration: none;
-    margin: 1em;
+    height: 3em;
+    margin-right: 1em;
   }
 }
 
@@ -65,33 +83,9 @@ header {
   header {
     flex-direction: row;
   }
-  .title-names {
-    display: flex;
-    flex-direction: column;
-  }
 
   .title {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     margin: 1em 1em;
-  }
-
-  .title-logo {
-    color: aliceblue;
-    height: 2em;
-    margin: 1em;
-    margin-bottom: 1em;
-  }
-
-  nav {
-    margin: 1em 0;
-  }
-
-  nav a {
-    text-decoration: none;
-    margin: 1em;
   }
 }
 
@@ -153,6 +147,7 @@ section {
     border-radius: 0.5em;
     border: none;
     cursor: pointer;
+    transition: background-color 0.4s;
   }
   
   input[type=submit]:hover {
