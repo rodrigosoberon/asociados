@@ -31,49 +31,14 @@
     </header>
 
     <main>
-      <div id="banner">
-        <div class="banner-item">
-          <div id="servicios">
-            <button class="accordion">Derecho penal</button>
-            <div class="panel">
-              <ul>
-                <li>Escarcelaciones</li>
-                <li>Querellas</li>
-                <li>Defensas</li>
-                <li>Recursos</li>
-                <li>Suspensión de juicio a prueba</li>
-                <li>Seguimiento de causas</li>
-                <li>Violencia de género</li>
-              </ul>
-            </div>
-    
-            <button class="accordion">Derecho civil</button>
-            <div class="panel">
-              <ul>
-                <li>Divorcios</li>
-                <li>Adopciones</li>
-                <li>Accidentes de tránsito</li>
-                <li>Consorcios</li>
-                <li>Determinación de la capacidad</li>
-                <li>Derechos realies</li>
-                <li>Contratos de alquileres</li>
-                <li>Contrato de servicios</li>
-                <li>Contratos societarios</li>
-                <li>Liquidación de expensas</li>
-                <li>Cambio de identidad de género</li>
-                <li>Desalojo</li>
-                <li>Constitución de sociedades</li>
-              </ul>
-            </div>
-    
-            <button class="accordion">Derecho laboral</button>
-            <div class="panel">
-              <ul>
-                <li>Parte demandada</li>
-                <li>Parte actora</li>
-                <li>Mediciones laborales (SECLO)</li>
-              </ul>
-            </div>
+      <div class="banner">
+        <div class="banner-item" id="sub">
+          <div class="banner-item-titulos">
+            <p>Seguimiento de causas penales.</p>
+            <p>Contratos.</p>
+            <p>Despidos.</p>
+            <p>Constitución de sociedades.</p>
+            <p>Desalojos.</p>
           </div>
         </div>
 
@@ -84,6 +49,14 @@
             id="nombre"
             name="nombre"
             placeholder="Su nombre aquí..."
+          />
+
+          <label for="telefono">Teléfono:</label>
+          <input
+            type="tel"
+            id="telefono"
+            name="telefono"
+            placeholder="011-3333-4444"
           />
 
           <label for="email">Correo electrónico:</label>
@@ -99,7 +72,7 @@
             id="mensaje"
             name="mensaje"
             placeholder="Escriba su consulta aquí..."
-            style="height: 200px"
+
           ></textarea>
 
           <input type="submit" value="Enviar" />
@@ -107,25 +80,69 @@
       </div>
 
       <section id="nosotros">
-        <h2>Quienes somos</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, nulla
-          temporibus dignissimos iste deleniti aspernatur soluta quasi excepturi
-          necessitatibus a libero ipsum blanditiis ducimus inventore mollitia
-          minus reprehenderit hic nemo.
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos un Estudio Jurídico, conformado por un joven equipo de abogados, especializado en Derecho Penal, Previsional, Laboral, Civil y Comercial.</p>
+        <p>Nuestro Staff de profesionales brinda un asesoramiento personalizado al cliente, caracterizándonos por la celeridad en la respuesta y el trato responsable, amable y ágil.
         </p>
-        <p>Imagen</p>
+        <p>Respondemos a un amplio abanico de necesidades del cliente, acompañándolo en cada instancia del proceso, de manera concurrente y estratégica, brindando un asesoramiento integral, creativo y eficiente y asistiendo en la correcta toma de decisiones.</p>
+        <p>Representamos a nuestros clientes en cualquier instancia, ya sea extrajudicial, en negociación, mediación, conciliación, querellas, defensas y recursos de amparo, encontrando el respaldo que el cliente necesita durante la etapa prejudicial y judicial.</p>
+        <p>Tomamos casos de la Ciudad Autónoma de Buenos Aires (CABA) y la Provincia de Buenos Aires.</p>
       </section>
 
-      <hr />
+      <section id="servicios">
+        <button class="accordion">Derecho penal</button>
+        <div class="panel">
+          <ul>
+            <li>NEGOCIACIONES</li>
+            <li>QUERELLAS</li>
+            <li>DEFENSAS</li>
+            <li>RECURSOS DE AMPARO</li>
+            <li>ASESORAMIENTO</li>
+          </ul>
+        </div>
 
+        <button class="accordion">Derecho laboral</button>
+        <div class="panel">
+          <ul>
+            <li>DESPIDOS</li>
+            <li>TRABAJO EN NEGRO</li>
+            <li>ACCIDENTES DE TRABAJO</li>
+            <li>DIFERENCIAS SALARIALES</li>
+            <li>DESPIDO POR EMBARAZO</li>
+          </ul>
+        </div>
 
+        <button class="accordion">Derecho civil y comercial</button>
+        <div class="panel">
+          <ul>
+            <li>ACCIDENTES DE TRÁNSITO</li>
+            <li>CONTRATOS DE LOCACIÓN</li>
+            <li>SUCESIONES</li>
+            <li>INCUMPLIMIENTO DE TRABAJO</li>
+          </ul>
+        </div>
+
+        <button class="accordion">Derecho de familia</button>
+        <div class="panel">
+          <ul>
+            <li>DIVORCIOS</li>
+            <li>ALIMENTOS</li>
+            <li>COMUNICACIÓN CON HIJOS</li>
+            <li>LIQUIDACIÓN SOCIEDAD CONYUGAL</li>
+            <li>DETERMINACIÓN DE CAPACIDAD</li>
+          </ul>
+        </div>
+      </section>
 
       <section id="mapa">
-        <p>mapa</p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6568.233304067394!2d-58.38677451303099!3d-34.60121163507018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac652482a1b%3A0x77d4b5cced4d0a9a!2sTribunales!5e0!3m2!1sen!2sar!4v1656673588508!5m2!1sen!2sar"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
-
-      <hr />
 
       <footer>
         <p>Pie</p>

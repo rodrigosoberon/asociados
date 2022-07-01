@@ -4,14 +4,12 @@
   --color3: #c2b78a;
   --color4: #1d1e21;
   --color5: #ebeff2;
-  --translucido: #ccccccb3;
+  --translucido: #f1f1f1b3;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  /* background-color: var(--color4); */
-  /* color: var(--color5); */
   font-family: "Raleway", sans-serif;
 }
 
@@ -33,10 +31,11 @@ header {
 }
 
 section {
-  padding: 2em;
+  /* padding: 2em; */
   background-color: var(--color4);
   color: var(--color5);
 }
+
 
 /** TITULO */
 .title {
@@ -57,6 +56,8 @@ section {
 }
 /** Fin TITULO  */
 
+
+
 /** NAVBAR */
 nav {
   margin: 1em 0;
@@ -71,102 +72,56 @@ nav a {
 
 nav a:hover {
   color: var(--color3);
-  /* background-color: var(--color3); */
 }
 /** Fin NABVAR */
 
 
-/** RESPONSIVE */
-@media (max-width: 607px) {
-  header {
-    flex-direction: column;
-  }
-
-  .title-logo {
-    height: 3em;
-    margin-right: 1em;
-  }
-
-  #banner {
-    flex-direction: column;
-  }
-}
-
-@media (min-width: 608px) {
-  header {
-    flex-direction: row;
-  }
-
-  .title {
-    margin: 1em 1em;
-  }
-
-  #banner {
-    flex-direction: row;
-  }
-
-  .banner-item {
-    width: 50%;
-  }
-
-}
-/** Fin RESPONSIVE */
-
-
 /** BANNER */
-#banner {
-  background-image: url(./images/legal2.webp);
+
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/legal2.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "text text text"
+  "form form form";
 }
 
 .banner-item{
-  /* color: var(--color1); */
   padding: 1em;
-  margin: 4em;
+  margin: 1em;
   border-radius: 1em;
 }
+
+#sub {
+  grid-area: text;
+  color: var(--color5);
+  margin: auto;
+  width: 100%;
+}
+
+.banner-item-titulos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.banner-item-titulos p{
+  margin: 1em;
+}
+
 /** Fin BANNER */
 
-/* * Servicios */
-.accordion {
-  background-color: var(--color4);
-  color: var(--color5);
-  cursor: pointer;
-  padding: 1em;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
-}
-
-.panel {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.6s ease-out;
-  background-color: var(--translucido)
-}
-
-.accordion::after {
-  content: "\02795";
-  font-size: 1em;
-  float: right;
-  margin-left: 5px;
-}
-
-.active::after {
-  content: "\2796";
-}
-/** Fin SERVICIOS */
 
 /** CONTACTO */
 
 #form-contacto {
   background-color: var(--translucido);
+  grid-area: form;
 }
 
 #form-contacto label {
@@ -175,6 +130,7 @@ nav a:hover {
 
 input[type="text"],
 input[type="email"],
+input[type="tel"],
 select,
 textarea {
   width: 100%;
@@ -203,7 +159,113 @@ input[type="submit"]:hover {
 }
 /** Fin CONTACTO */
 
+
+/** NOSOTROS */
+#nosotros{
+  padding: 2em;
+}
+/** Fin Nosotros */
+
+
+/* * Servicios */
+#servicios{
+    background-color: var(--color2);
+  color: var(--color5);
+}
+
+.accordion {
+  background-color: var(--color2);
+  color: var(--color5);
+  font-size: large;
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-out;
+}
+
+.accordion::after {
+  content: "\02795";
+  font-size: 1em;
+  float: right;
+  margin-left: 5px;
+}
+
+.active::after {
+  content: "\2796";
+}
+/** Fin SERVICIOS */
+
+
+/** MAPA  */
+iframe{ 
+  width: 100vw;
+  height: 20em;
+}
+/** Fin MAPA */
+
+
 footer {
   background-color: var(--color4);
   color: var(--color5);
 }
+
+/** RESPONSIVE */
+@media (max-width: 607px) {
+  header {
+    flex-direction: column;
+  }
+
+  .title-logo {
+    height: 3em;
+    margin-right: 1em;
+  }
+
+  #banner {
+    flex-direction: column;
+  }
+
+  #sub{
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 608px) {
+  header {
+    flex-direction: row;
+  }
+
+  .title {
+    margin: 1em 1em;
+  }
+
+  .banner {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "text form"
+    "text form";
+  }
+
+  #sub{
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 925px) {
+  .banner {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #sub{
+    font-size: 2rem;
+  }
+}
+/** Fin RESPONSIVE */
