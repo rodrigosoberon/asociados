@@ -4,13 +4,12 @@
   --color3: #c2b78a;
   --color4: #1d1e21;
   --color5: #ebeff2;
+  --translucido: #f1f1f1b3;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
-  background-color: var(--color4);
-  color: var(--color5);
   font-family: "Raleway", sans-serif;
 }
 
@@ -27,6 +26,14 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--color4);
+  color: var(--color5);
+}
+
+section {
+  /* padding: 2em; */
+  background-color: var(--color4);
+  color: var(--color5);
 }
 
 
@@ -50,6 +57,7 @@ header {
 /** Fin TITULO  */
 
 
+
 /** NAVBAR */
 nav {
   margin: 1em 0;
@@ -59,15 +67,181 @@ nav a {
   text-decoration: none;
   margin: 1em;
   transition: color 0.4s;
+  color: var(--color5);
 }
 
-nav a:hover{
+nav a:hover {
   color: var(--color3);
-  /* background-color: var(--color3); */
 }
 /** Fin NABVAR */
 
 
+/** BANNER */
+
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/legal2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "text text text"
+  "form form form";
+}
+
+.banner-item{
+  padding: 1em;
+  margin: 1em;
+  border-radius: 1em;
+}
+
+#sub {
+  grid-area: text;
+  color: var(--color5);
+  margin: auto;
+  width: 100%;
+}
+
+.banner-item-titulos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.banner-item-titulos p{
+  margin: 1em;
+}
+
+/** Fin BANNER */
+
+
+/** CONTACTO */
+
+#form-contacto {
+  background-color: var(--translucido);
+  grid-area: form;
+}
+
+#form-contacto label {
+  color: var(--color4);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 1em;
+  color: var(--color4);
+  background-color: var(--color5);
+  border: 0px solid;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+input[type="submit"] {
+  color: var(--color5);
+  background-color: var(--color2);
+  padding: 12px 20px;
+  border-radius: 0.5em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--color1);
+}
+/** Fin CONTACTO */
+
+
+/** NOSOTROS */
+#nosotros{
+  padding: 2em;
+}
+#nosotros p{
+  margin: 1em;
+  line-height: 1.5em;
+  font-size: 1.25em;
+  text-align: justify;
+}
+
+.texto{
+  display: grid;
+}
+/** Fin NOSOTROS */
+
+
+/* * SERVICIOS */
+#servicios{
+  color: var(--color5);
+  padding: 2em;
+}
+
+.servicios-detalle{
+  padding: 3em;
+}
+
+.accordion {
+  background-color: var(--color4);
+  color: var(--color3);
+  font-size: large;
+  cursor: pointer;
+  padding: 1em;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-out;
+}
+
+.panel ul{
+  list-style-type: none;
+  margin: 0;
+}
+
+.panel ul li{
+  padding: 0.5em;
+}
+
+.accordion::after {
+  content: "\02795";
+  font-size: 1em;
+  float: right;
+  margin-left: 5px;
+}
+
+.active::after {
+  content: "\2796";
+}
+/** Fin SERVICIOS */
+
+
+/** MAPA  */
+iframe{ 
+  width: 100vw;
+  height: 20em;
+}
+/** Fin MAPA */
+
+
+footer {
+  background-color: var(--color4);
+  color: var(--color5);
+}
+
+/** RESPONSIVE */
 @media (max-width: 607px) {
   header {
     flex-direction: column;
@@ -76,6 +250,17 @@ nav a:hover{
   .title-logo {
     height: 3em;
     margin-right: 1em;
+  }
+
+  #banner {
+    flex-direction: column;
+  }
+
+  #sub{
+    font-size: 1.2em;
+  }
+  .texto{
+    grid-template-columns: 1fr;
   }
 }
 
@@ -87,75 +272,33 @@ nav a:hover{
   .title {
     margin: 1em 1em;
   }
+
+  .banner {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+    "text form"
+    "text form";
+  }
+
+  #sub{
+    font-size: 1.2rem;
+  }
+
+  .texto{
+    grid-template-columns: 1fr;
+  }
 }
 
-#banner-image {
-  width: 100%;
+@media (min-width: 925px) {
+  .banner {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  #sub{
+    font-size: 2rem;
+  }
+  .texto{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
-
-section {
-  padding: 2em;
-}
-
-/* * Servicios */
-.accordion {
-    cursor: pointer;
-    padding: 1em;
-    width: 12em;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-  }
-  
-  .panel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.6s ease-out;
-  }
-
-  .accordion::after {
-    content: '\02795';
-    font-size: 1em;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active::after {
-    content: "\2796";
-  }
-  /** Fin SERVICIOS */
-
-
-  /** CONTACTO */
-  input[type=text], input[type=email], select, textarea {
-    width: 100%;
-    padding: 1em;
-    color: var(--color4);
-    background-color: var(--color5);
-    border: 1px solid var(--color4);
-    border-radius: 0.5em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-  }
-  
-  input[type=submit] {
-    background-color: var(--color2);
-    color: var(--color5);
-    padding: 12px 20px;
-    border-radius: 0.5em;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.4s;
-  }
-  
-  input[type=submit]:hover {
-    background-color: var(--color1);
-  }
-  
-  .container {
-    border-radius: 5px;
-    padding: 20px;
-  }
-  /** Fin CONTACTO */
+/** Fin RESPONSIVE */
