@@ -168,24 +168,28 @@ input[type="submit"]:hover {
   margin: 1em;
   line-height: 1.5em;
   font-size: 1.25em;
+  text-align: justify;
 }
 
 .texto{
   display: grid;
 }
+/** Fin NOSOTROS */
 
-/** Fin Nosotros */
 
-
-/* * Servicios */
+/* * SERVICIOS */
 #servicios{
-    background-color: var(--color2);
   color: var(--color5);
+  padding: 2em;
+}
+
+.servicios-detalle{
+  padding: 3em;
 }
 
 .accordion {
-  background-color: var(--color2);
-  color: var(--color5);
+  background-color: var(--color4);
+  color: var(--color3);
   font-size: large;
   cursor: pointer;
   padding: 1em;
@@ -200,6 +204,15 @@ input[type="submit"]:hover {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.6s ease-out;
+}
+
+.panel ul{
+  list-style-type: none;
+  margin: 0;
+}
+
+.panel ul li{
+  padding: 0.5em;
 }
 
 .accordion::after {
