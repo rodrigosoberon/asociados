@@ -164,6 +164,16 @@ input[type="submit"]:hover {
 #nosotros{
   padding: 2em;
 }
+#nosotros p{
+  margin: 1em;
+  line-height: 1.5em;
+  font-size: 1.25em;
+}
+
+.texto{
+  display: grid;
+}
+
 /** Fin Nosotros */
 
 
@@ -236,6 +246,9 @@ footer {
   #sub{
     font-size: 1.2em;
   }
+  .texto{
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (min-width: 608px) {
@@ -257,6 +270,10 @@ footer {
   #sub{
     font-size: 1.2rem;
   }
+
+  .texto{
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (min-width: 925px) {
@@ -266,6 +283,9 @@ footer {
 
   #sub{
     font-size: 2rem;
+  }
+  .texto{
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 /** Fin RESPONSIVE */
