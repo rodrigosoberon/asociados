@@ -235,17 +235,38 @@ iframe{
 }
 /** Fin MAPA */
 
-
+/** FOOTER */
 footer {
   background-color: var(--color4);
   color: var(--color5);
   padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+
+.redes-sociales ul{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 2em;
+  padding: 0;
+}
+
+.redes-sociales ul li a img{
+  height: 2em;
+}
+
+
+/** Fin FOOTER */
+
+
 
 /** RESPONSIVE */
 @media (max-width: 607px) {
   header {
     flex-direction: column;
+    padding-top: 1em;
   }
 
   .title-logo {
@@ -262,6 +283,18 @@ footer {
   }
   .texto{
     grid-template-columns: 1fr;
+  }
+
+  .servicios-detalle{
+    padding: 0px;
+  }
+
+  footer{
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    text-align: center
   }
 }
 
@@ -301,5 +334,6 @@ footer {
   .texto{
     grid-template-columns: 1fr 1fr 1fr;
   }
+
 }
 /** Fin RESPONSIVE */
